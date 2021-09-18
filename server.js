@@ -11,7 +11,7 @@ const rowdy = require("rowdy-logger");
 const rowdyResults = rowdy.begin(app);
 const db = require('./models')
 const allowedOrigins = {
-  origin: 'https://wayfarer-fork.herokuapp.com/'
+  origin: 'https://wayfarer-fork.herokuapp.com'
 }
 
 // middleware
