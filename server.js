@@ -10,10 +10,13 @@ const app = express();
 const rowdy = require("rowdy-logger");
 const rowdyResults = rowdy.begin(app);
 const db = require('./models')
+const allowedOrigins = {
+  origin: 'https://wayfarer-fork.herokuapp.com/'
+}
 
 // middleware
 // cors allows the express server to take reqs from react
-app.use(cors());
+app.use(cors(allowedOrigins));
 // use json to parse the form data
 app.use(express.json());
 
